@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Form</title>
+  </head>
+
+  <body>
+    <form name="nyoba" action="nyoba.html" method="get">
+      <label for="username">Username : </label>
+      <input type="text" id="username" name="username" />
+      <br />
+      <label for="password">Password : </label>
+      <input type="password" id="password" name="password" />
+      <br />
+      <label for="date_picker">Tanggal : </label>
+      <input
+        type="date"
+        name="date_picker"
+        id="date_picker"
+        value="2023-12-12"
+        min="2000-01-01"
+        max="2024-12-12"
+      />
+      <br />
+      <input type="radio" id="pria" name="pria" />
+      <label for="pria">Radio 1</label>
+      <input type="radio" id="wanita" name="wanita" />
+      <label for="wanita">Radio 2</label>
+      <input type="checkbox" id="warna" />
+      <br />
+      <input type="checkbox" id="merah" name="warna" />
+      <label for="warna">checkbox merah</label>
+      <input type="checkbox" id="kuning" name="warna" />
+      <label for="warna">checkbox kuning</label>
+      <input type="checkbox" id="biru" name="warna" />
+      <label for="warna">checkbox biru</label>
+      <br />
+      <textarea name="" id="" cols="30" rows="10">Textarea</textarea>
+      <br />
+      <select>
+        <option>option 1</option>
+        <option>option 2</option>
+        <option>option 3</option>
+      </select>
+      <button type="reset">Riset</button>
+      <button type="submit"></button>
+    </form>
+    
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td align="left">Username</td>
+        <td>:</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td align="left">Password</td>
+        <td>:</td>
+        <td><input type="password" /></td>
+      </tr>
+      <tr>
+        <td>Combo Box</td>
+        <td>:</td>
+        <td>
+          <select>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>Twitter</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td align="left">Text area</td>
+        <td>:</td>
+        <td><textarea name="" id="" cols="20" rows="7"></textarea></td>
+      </tr>
+      <tr>
+        <td align="left" colspan="3">
+          <input type="radio" name="jeniskelamin" />Pria
+          <input type="radio" name="jeniskelamin" />Wanita
+        </td>
+      </tr>
+      <tr>
+        <td align="left" colspan="3">
+          <input type="checkbox" />Reading <input type="checkbox" />Singing
+        </td>
+      </tr>
+      <tr>
+        <td align="right" colspan="3"><button>Button</button></td>
+      </tr>
+    </table>
+  </body>
+</html>
