@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Form</title>
+  </head>
+
+  <body>
+    <form name="nyoba" action="nyoba.html" method="get">
+      <table border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td align="left">Username</td>
+          <td>:</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td align="left">Password</td>
+          <td>:</td>
+          <td><input type="password" /></td>
+        </tr>
+        <tr>
+          <td>Combo Box</td>
+          <td>:</td>
+          <td>
+            <select>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>Twitter</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Combo Box Group</td>
+          <td>:</td>
+          <td>
+            <select>
+              <optgroup label="Medsos">
+                <option value="fb">Facebook</option>
+                <option value="ig">Instagram</option>
+                <option value="wa">WhatsApp</option>
+              </optgroup>
+              <optgroup label="Gaming">
+                <option value="ml">Mobile Legends</option>
+                <option value="aov" selected>Arena of Valor</option>
+                <option value="lol">League of Legends</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="left">Text area</td>
+          <td>:</td>
+          <td><textarea name="" id="" cols="20" rows="7"></textarea></td>
+        </tr>
+        <tr>
+          <td align="left" colspan="3">
+            <input type="radio" name="jeniskelamin" />Pria
+            <input type="radio" name="jeniskelamin" />Wanita
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colspan="3">
+            <input type="checkbox" />Reading <input type="checkbox" />Singing
+          </td>
+        </tr>
+        <tr>
+          <td align="right" colspan="3"><button>Submit</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

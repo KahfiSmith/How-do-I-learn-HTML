@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Form Validation</title>
+  </head>
+  <style>
+    form {
+      width: 600px;
+      padding: 20px;
+    }
+    form div {
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <form action="" method="post" novalidate enctype="multipart/form-data">
+      <div>
+        <label for="nama">Masukkan Nama : </label>
+        <input
+          type="text"
+          name="nama"
+          id="nama"
+          required
+          autocomplete="off"
+          oninvalid="this.setCustomValidity('Please fill out this field')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+
+      <div>
+        <label for="password">Masukkan Password : </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          minlength="8"
+          autocomplete="off"
+        />
+      </div>
+
+      <div>
+        <label for="email">Masukkan Email : </label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div>
+        <label for="nohp">Masukkan No HP : </label>
+        <input
+          type="tel"
+          name="nohp"
+          id="nohp"
+          pattern="(\+62|62|0)[0-9]{10,13}$"
+          autocomplete="off"
+        />
+      </div>
+
+      <div>
+        <label for="hobi">Masukkan Hobi : </label>
+        <input type="text" id="hobi" name="hobi" list="hobbies" />
+
+        <datalist id="hobbies">
+          <option value="Gaming">Gaming</option>
+          <option value="Coding">Coding</option>
+          <option value="Reading">Reading</option>
+        </datalist>
+      </div>
+
+      <div>
+        <label for="website">Masukkan URL Website : </label>
+        <input type="url" name="website" id="website" autocomplete="off" />
+      </div>
+
+      <div>
+        <label for="angka">Masukkan Angka : </label>
+        <input
+          type="number"
+          name="angka"
+          id="angka"
+          min="0"
+          step="10"
+          autocomplete="off"
+        />
+      </div>
+
+      <div>
+        <label for="kodepos">Masukkan Kode Pos : </label>
+        <input
+          type="text"
+          name="kodepos"
+          id="kodepos"
+          pattern="^([1-9])[0-9]{4}$"
+          autocomplete="off"
+        />
+      </div>
+
+      <div>
+        <fieldset>
+          <legend>Alamat</legend>
+          <div>
+            <label for="jalan">Jalan : </label>
+            <input type="text" name="jalan" />
+          </div>
+          <div>
+            <label for="Kota">Kota : </label> 
+            <input type="text" name="kota" />
+          </div>
+          <div>
+            <label for="provinsi">Provinsi : </label>
+            <input type="text" name="provinsi" />
+          </div>
+        </fieldset>
+      </div>
+
+      <div>
+        <label for="file">File : </label>
+        <input type="file" name="file" id="file" />
+      </div>
+
+      <div>
+        <label for="slider">Range Angka : </label>
+        <input type="range" name="slider" id="slider" step="10" />
+      </div>
+
+      <div>
+        <label for="date_picker">Tanggal : </label>
+        <input
+          type="date"
+          name="date_picker"
+          id="date_picker"
+          value="2023-12-12"
+          min="2000-01-01"
+          max="2024-12-12"
+        />
+      </div>
+
+      <div>
+        <label for="month_picker">Bulan : </label>
+        <input
+          type="month"
+          name="month_picker"
+          value="2024-02"
+          id="month_picker"
+        />
+      </div>
+
+      <div>
+        <label for="time_picker">Jam : </label>
+        <input type="time" name="time_picker" value="07:00" id="time_picker" />
+      </div>
+
+      <div>
+        <label for="week_picker">Minggu : </label>
+        <input
+          type="week"
+          name="week_picker"
+          value="2024-W07"
+          id="week_picker"
+        />
+      </div>
+
+      <div>
+        <label for="option_single">Option : </label>
+        <select>
+          <option>Facebook</option>
+          <option>Instagram</option>
+          <option>Twitter</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="option_multiple">Option Group : </label>
+        <select>
+          <optgroup label="Media sosial">
+            <option value="fb">Facebook</option>
+            <option value="ig">Instagram</option>
+            <option value="wa">WhatsApp</option>
+          </optgroup>
+          <optgroup label="Gaming">
+            <option value="ml">Mobile Legends</option>
+            <option value="aov" selected>Arena of Valor</option>
+            <option value="lol">League of Legends</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div>
+        <input type="radio" id="pria" name="pria" />
+        <label for="pria">Laki-laki</label>
+        <input type="radio" id="wanita" name="wanita" />
+        <label for="wanita">Perempuan</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="merah" name="warna" />
+        <label for="warna">checkbox merah</label>
+        <input type="checkbox" id="kuning" name="warna" />
+        <label for="warna">checkbox kuning</label>
+        <input type="checkbox" id="biru" name="warna" />
+        <label for="warna">checkbox biru</label>
+      </div>
+
+      <div>
+        <textarea name="komentar" id="komentar" cols="50" rows="10">
+Textarea</textarea
+        >
+      </div>
+
+      <div>
+        <button type="reset">Reset</button>
+        <button type="submit">Kirim</button>
+      </div>
+    </form>
+  </body>
+</html>
